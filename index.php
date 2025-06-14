@@ -34,7 +34,7 @@ if (isset($_GET['logout'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grocery Store Inventory System</title>
+  <title>Store Stocker</title>
   <link rel="icon" type="image/png" href="https://grocery-store-inventory-system.onrender.com/resources/grocerystore.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
@@ -42,7 +42,7 @@ if (isset($_GET['logout'])) {
 
 <body>
   <header>
-    <h1><img src="https://grocery-store-inventory-system.onrender.com/resources/grocerystore.png" alt="Store Icon" style="width: 40px; vertical-align: middle;">Grocery Store Inventory System</h1>
+    <h1><img src="https://grocery-store-inventory-system.onrender.com/resources/grocerystore.png" alt="Store Icon" style="width: 40px; vertical-align: middle;">Store Stocker</h1>
     <?php if ($showInventory): ?>
       <a href="?logout=true" id="logoutBtn">Logout</a>
     <?php endif; ?>
