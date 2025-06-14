@@ -1,17 +1,19 @@
-# Use PHP 8.2 with Apache
+# Use official PHP 8.2 Apache image
 FROM php:8.2-apache
 
-# Enable Apache rewrite module (optional but useful)
+# Install dependencies required for SQLite
+RUN apt-get update && apt-get install -y \
+    libsqlite3-dev \
+    && docker-php-ext-install pdo pdo_sqlite
+
+# Enable Apache rewrite module (if needed)
 RUN a2enmod rewrite
 
-# Install SQLite extension
-RUN docker-php-ext-install pdo pdo_sqlite
-
-# Copy all files into web server root
+# Copy all project files into the web server root
 COPY . /var/www/html/
 
-# Set permissions for SQLite to be writable (adjust as needed)
+# Give proper permissions to the SQLite database directory
 RUN chown -R www-data:www-data /var/www/html/db
 
-# Expose port (Render uses 80 automatically)
+# Expose port 80 (used by Render automatically)
 EXPOSE 80
