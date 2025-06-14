@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fffbe6;
+  padding: 20px;
+}
+
+h1 {
+  color: maroon;
+}
+
+.category-manager {
+  margin: 20px 20px 20px 0px;
+}
+
+.category-manager input,
+.category-manager button {
+  padding: 8px;
+  margin-right: 5px;
+  border-radius: 8px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.tab {
+  padding: 10px 40px 10px 15px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background: #eee;
+  margin-right: 5px;
+  position: relative;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab.active {
+  background: #fff;
+  font-weight: bold;
+}
+
+.tab .edit,
+.tab .delete-cat {
+  position: absolute;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.tab .edit {
+  right: 24px;
+}
+
+.tab .delete-cat {
+  right: 4px;
+}
+
+.tab-contents section {
+  display: none;
+}
+
+.tab-contents section.active {
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #aaa;
+  padding: 8px;
+  text-align: center;
+}
+
+button,
+.tabs button {
+  background: maroon;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover,
+.tabs button:hover {
+  background: #a00000;
+}
+
+button.delete:hover,
+.tabs .delete-cat:hover {
+  background: #c0392b;
+}
+
+.category-title {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+  text-decoration: underline;
+}
+
+.prod-form {
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.prod-form input,
+.prod-form button {
+  padding: 5px;
+  border-radius: 8px;
+}
+
+td button.increase,
+td button.decrease {
+  padding: 2px 6px;
+  margin: 0 4px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+#logoutBtn {
+  float: right;
+  padding: 10px 15px;
+  background-color: #f44336;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+#logoutBtn:hover {
+  background-color: #d32f2f;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-form .input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: maroon;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-form button[type="submit"] {
+  background-color: maroon;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #a00000;
+}
